@@ -1,0 +1,7 @@
+<h1>New Query</h1>
+ <%= simple_form_for(@query, html: { class: 'form-horizontal' }) do |f| %>
+ <%= f.input :title %>
+ <%= f.input :body  %>
+
+ <%= f.button :submit, class: 'btn btn-primary' %>
+ <%end%>
