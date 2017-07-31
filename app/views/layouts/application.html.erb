@@ -11,6 +11,21 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+
+          <h2><%= link_to 'StackJoeverFlow', root_path%></h2>
+
+
+        </div>
+        <div class="col-md-3 col-md-offset-6">
+          <%= link_to 'Ask a Question', new_query_path, class: "btn btn-info navbar-btn" %>
+        </div>
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
     <div class='container'>
       <%= yield %>
     </div>

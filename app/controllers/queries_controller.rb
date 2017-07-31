@@ -1,6 +1,6 @@
 class QueriesController < ApplicationController
   def index
-    @queries = Query.all
+    @queries = Query.all.page(params[:page])
   end
 
   def show

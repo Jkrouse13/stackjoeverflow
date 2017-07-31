@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  resources :queries
-  get 'queries/index'
+  resources :queries do
+    resources :answers
+  end
 
-  get 'queries/show'
+  root 'queries#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

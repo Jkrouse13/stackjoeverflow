@@ -1,2 +1,20 @@
-<h1>Queries#index</h1>
-<p>Find me in app/views/queries/index.html.erb</p>
+<div class="jumbotron">
+  <h1>StackJoeverFlow</h1>
+  <p>Have a question?  Ask the people of the internet... they usually know what's up.</p>
+  <%= link_to 'Ask a question', new_query_path, class: 'btn btn-info' %>
+</div>
+
+<h1>Queries</h1>
+<table class="table table-striped">
+
+    <% @queries.each do |q| %>
+      <tr>
+        <td>
+          <%= link_to q.title, q %>
+        </td>
+      </tr>
+    <% end %>
+
+    <%= paginate @queries %>
+
+</table>
